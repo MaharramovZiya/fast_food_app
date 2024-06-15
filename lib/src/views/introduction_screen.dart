@@ -21,9 +21,12 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
           children: [
             const IntroductionPageViewComponent(),
             PageIndicatorComponent(),
-            const Positioned(
+            Positioned(
                 bottom: 30,
                 child: WidgetBtn(
+                  onTap: () {
+                    Navigator.pushReplacementNamed(context, '/home');
+                  },
                   text: "GET STARTED",
                 ))
           ],

@@ -19,7 +19,7 @@ class _IntroductionPageViewComponentState extends State<IntroductionPageViewComp
   Widget build(BuildContext context) {
     final introProvider =
         Provider.of<IntroductionProvider>(context, listen: false);
-    return Container(
+    return Container( 
       padding: const EdgeInsets.all(10),
       color: CustomColors.pink,
       height: MediaQuery.of(context).size.height,

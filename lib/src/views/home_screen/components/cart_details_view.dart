@@ -32,8 +32,10 @@ class CartDetailsView extends StatelessWidget {
             ),
           ),
           const SizedBox(height: defaultPadding),
-          const SizedBox(
-              width: double.infinity, child: WidgetBtn(text: "Order now")),
+           SizedBox(
+              width: double.infinity, child: WidgetBtn(
+                onTap:(){},
+                text: "Order now"),),
         ],
       ),
     );

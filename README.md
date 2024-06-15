@@ -16,5 +16,4 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
-1 - problem - list view menu category.
-2 - Prooblem can't add product short view card menu at product detail view.
+//indicator problem

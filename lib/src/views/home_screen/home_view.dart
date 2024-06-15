@@ -29,8 +29,14 @@ class _HomeViewState extends State<HomeView> {
     }
   }
 
-  //
   String? selectedCategory;
+  //Category selecter
+  void _onCategorySelected(String? category) {
+    setState(() {
+      selectedCategory = category;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     List<ProductsModel> filteredProductsList = selectedCategory != null
@@ -56,7 +62,7 @@ class _HomeViewState extends State<HomeView> {
                 builder: (context, BoxConstraints constraints) {
                   return Column(children: [
                     const SearchComponent(),
-                    const CategoryMenuComponent(),
+                     CategoryMenuComponent(onCategorySelected: _onCategorySelected,),
 
                     AnimatedPositioned(
                       duration: panelTransition,

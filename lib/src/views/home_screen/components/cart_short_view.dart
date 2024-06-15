@@ -29,10 +29,16 @@ class CartShortView extends StatelessWidget {
                       child: Hero(
                           tag:
                               "${homeController.cart[index].product!.title}_cartTag",
-                          child: CircleAvatar(
-                            backgroundColor: Colors.white,
-                            backgroundImage: AssetImage(
-                                homeController.cart[index].product!.image),
+                          child: InkWell(
+                            onTap: () {
+                              homeController.removeProductFromCart(
+                                  homeController.cart[index].product!);
+                            },
+                            child: CircleAvatar(
+                              backgroundColor: Colors.white,
+                              backgroundImage: AssetImage(
+                                  homeController.cart[index].product!.image),
+                            ),
                           )),
                     )),
           ),

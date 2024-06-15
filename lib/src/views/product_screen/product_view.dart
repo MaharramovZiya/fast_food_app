@@ -19,16 +19,20 @@ class ProductView extends StatefulWidget {
 
 class _ProductViewState extends State<ProductView> {
   final String _cartTag = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      bottomNavigationBar: const SizedBox(
+      bottomNavigationBar: SizedBox(
         width: double.infinity,
         child: Padding(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
                 horizontal: defaultPadding, vertical: 10),
-            child:  WidgetBtn(text: "Add")),
+            child: WidgetBtn(
+              text: "Add",
+              onTap: widget.onProductAdd,
+            )),
       ),
       body: SingleChildScrollView(
         child: Column(

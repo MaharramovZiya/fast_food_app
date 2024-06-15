@@ -3,7 +3,8 @@ import 'package:fast_food_app/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class CategoryMenuComponent extends StatefulWidget {
-  const CategoryMenuComponent({super.key});
+  const CategoryMenuComponent({super.key, required this.onCategorySelected});
+  final ValueChanged<String?> onCategorySelected;
 
   @override
   State<CategoryMenuComponent> createState() => _CategoryMenuComponentState();
@@ -26,6 +27,7 @@ class _CategoryMenuComponentState extends State<CategoryMenuComponent> {
               setState(() {
                 selectedCategory = data.title;
               });
+              widget.onCategorySelected(data.title);
             },
             child: Padding(
               padding: const EdgeInsets.all(5),

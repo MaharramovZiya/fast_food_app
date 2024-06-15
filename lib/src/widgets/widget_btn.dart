@@ -1,27 +1,18 @@
-import 'package:fast_food_app/controllers/home_controller.dart';
-import 'package:fast_food_app/data/models/products_models.dart';
-import 'package:fast_food_app/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:fast_food_app/utils/constants/colors.dart';
 
-class WidgetBtn extends StatefulWidget {
-  const WidgetBtn({super.key, required this.text});
+class WidgetBtn extends StatelessWidget {
+  const WidgetBtn({super.key, required this.text, required this.onTap});
+
   final String text;
-
-  @override
-  State<WidgetBtn> createState() => _WidgetBtnState();
-}
-
-class _WidgetBtnState extends State<WidgetBtn> {
-  final controller = HomeController();
-  String? selectedCategory;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
- 
     return GestureDetector(
       onTap: () {
-        // controller.addProductCart(filteredProductsList[]);
-        // Navigator.pushNamed(context, '/home');
+        onTap();
+        Navigator.pop(context);
       },
       child: Container(
         padding: const EdgeInsets.all(11),
@@ -38,7 +29,7 @@ class _WidgetBtnState extends State<WidgetBtn> {
             borderRadius: BorderRadius.circular(25)),
         width: MediaQuery.of(context).size.width / 1.4,
         child: Text(
-          widget.text,
+          text,
           textAlign: TextAlign.center,
           style: const TextStyle(
               color: Colors.white, fontWeight: FontWeight.w500, fontSize: 17),
