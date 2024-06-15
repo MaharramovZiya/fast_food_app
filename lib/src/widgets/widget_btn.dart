@@ -12,7 +12,7 @@ class WidgetBtn extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         onTap();
-        Navigator.pop(context);
+       
       },
       child: Container(
         padding: const EdgeInsets.all(11),

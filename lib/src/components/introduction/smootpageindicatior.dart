@@ -7,11 +7,10 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class PageIndicatorComponent extends StatelessWidget {
   PageIndicatorComponent({super.key});
-    final controller = IntroductionWidget();
+  final controller = IntroductionWidget();
 
   @override
   Widget build(BuildContext context) {
-
     final introProvider =
         Provider.of<IntroductionProvider>(context, listen: false);
     return Positioned(
@@ -27,7 +26,7 @@ class PageIndicatorComponent extends StatelessWidget {
             strokeWidth: 1.5,
             dotHeight: 13,
             dotWidth: 13,
-            activeDotColor: Colors.orangeAccent.shade400,
+            activeDotColor: Colors.orangeAccent.shade700,
             dotColor: CustomColors.primary),
       ),
     );
